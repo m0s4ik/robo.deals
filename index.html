@@ -190,12 +190,21 @@
             document.getElementById("top").appendChild(div)
 
         }
-      $.getJSON('https://api.myjson.com/bins/95neg', function(data) {
-    lastid = data.lastMessage
+ $.ajaxSetup({
+        async: false
+    });
+
+data = $.getJSON('https://api.myjson.com/bins/95neg')
+
+
+
+    lastid =data.responseJSON.lastMessage
     for (var index = 0; index < 10; index++) {
             addTop(lastid - index);
             console.log(index);
         }
+
+
 
 });
     </script>
