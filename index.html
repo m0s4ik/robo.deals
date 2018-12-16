@@ -190,15 +190,14 @@
             document.getElementById("top").appendChild(div)
 
         }
-        for (var index = 0; index < 5; index++) {
-            //addPost(lastid - index);
-            //console.log(index);
-        }
-
-        for (var index = 0; index < 10; index++) {
-            addTop((lastid) - index);
+      $.getJSON('https://api.myjson.com/bins/95neg', function(data) {
+    lastid = data.lastMessage
+    for (var index = 0; index < 10; index++) {
+            addTop(lastid - index);
             console.log(index);
         }
+
+});
     </script>
 
     <!-- All Plugins js -->
