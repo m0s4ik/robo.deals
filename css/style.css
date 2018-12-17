@@ -881,14 +881,14 @@ input:focus {
     .video-mag-tabs-area .tab-content .owl-carousel .owl-prev,
     .video-mag-tabs-area .tab-content .owl-carousel .owl-next {
       width: 42px;
-      height: 35px;
+      height: 25px;
       background-color: #edf1f4;
       position: absolute;
-      top: -55px;
+      top: -50px;
       right: 0;
       font-size: 18px;
       color: #a5a5a5;
-      line-height: 35px;
+      line-height: 25px;
       text-align: center;
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms;
