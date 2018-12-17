@@ -227,7 +227,7 @@
       data = $.getJSON("https://api.myjson.com/bins/95neg");
 
       lastid = data.responseJSON.lastMessage;
-      for (var index = 0; index < 1; index++) {
+      for (var index = 0; index < 10; index++) {
         addTop(lastid - index);
         console.log(index);
       }
