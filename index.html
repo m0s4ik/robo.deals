@@ -1,131 +1,172 @@
 <!DOCTYPE html>
-<html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Title -->
     <title>Robo.Deals</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/favicon.ico" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap-social.css" />
+  </head>
 
-
-</head>
-
-<body class="d-flex flex-column" style="min-height: 100vh">
+  <body class="d-flex flex-column" style="min-height: 100vh">
     <!-- Preloader  style="display:none!important" -->
     <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="spinner">
-            <div class="double-bounce1"><img src="img/core-img/robodeals-logo.png" alt="" width="85"></div>
-            <div class="double-bounce2"><img src="img/core-img/robodeals-logo.png" alt="" width="85"></div>
+      <div class="spinner">
+        <div class="double-bounce1">
+          <img src="img/core-img/robodeals-logo.png" alt="" width="85" />
         </div>
+        <div class="double-bounce2">
+          <img src="img/core-img/robodeals-logo.png" alt="" width="85" />
+        </div>
+      </div>
     </div>
     <main class="flex-fill">
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+      <!-- ##### Header Area Start ##### -->
 
-        <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="container-fluid h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12 col-sm-4">
-                        <!-- Logo Area -->
-                        <div class="logo-area">
-                            <a href="index.html">
-                                <h1 style="font-size: 2.9rem;"><img src="img/core-img/robodeals-logo.png" alt="" width="85">Robo.Deals</h1>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-8">
-                        <!-- Top Add Area -->
-                        <div class="top-add-area text-right">
-                                <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/robo.deals" target="_blank">
-                                        <span class="fa fa-facebook"></span>
-                                      </a>
-                                      <a class="btn btn-social-icon btn-instagram" href="https://www.instagram.com/robo.deals/" target="_blank">
-                                            <span class="fa fa-instagram"></span>
-                                          </a>
-                         
-                                <a class="btn btn-social  btn-telegram" href="https://t.me/robodeals" target="_blank">
-                                    <span class="fa fa-telegram"> </span>Seguici su Telegram </a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <header>
+       
+        <img class="robologo" src="img/core-img/robodeals-logo.png" />
+        <span class="robotext">Robo.Deals</span>
+     
+        <div class="head">
+          <a
+            class="tile socialmedia btn btn-social btn-telegram"
+            href="https://t.me/robodeals"
+            target="_blank"
+          >
+            <span class="fa fa-telegram"></span>
+            Seguici su Telegram
+          </a>
+          <a
+            class="tile socialmedia btn btn-social-icon btn-facebook hiddensocial"
+            href="https://www.facebook.com/robo.deals"
+            target="_blank"
+          >
+            <span class="fa fa-facebook"></span>
+          </a>
+          <a
+            class="tile socialmedia btn btn-social-icon btn-instagram hiddensocial"
+            href="https://www.instagram.com/robo.deals/"
+            target="_blank"
+          >
+            <span class="fa fa-instagram"></span>
+          </a>
         </div>
+      </header>
+      <!-- ##### Header Area End ##### -->
 
-
-
-    </header>
-    <!-- ##### Header Area End ##### -->
-
-    <!-- ##### Tabs Area Start ##### -->
-    <div class="video-mag-tabs-area mt-5">
+      <!-- ##### Tabs Area Start ##### -->
+      <div class="video-mag-tabs-area mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab"
-                                aria-controls="latest" aria-selected="true">Ultime Offerte</a>
-                        </li>
-
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="latest" role="tabpanel" aria-labelledby="latest-tab">
-                            <div class="latest-videos-slide owl-carousel" id="top">
-
-                            </div>
-                        </div>
-
-                    </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="latest-tab"
+                    data-toggle="tab"
+                    href="#latest"
+                    role="tab"
+                    aria-controls="latest"
+                    aria-selected="true"
+                    >Ultime Offerte</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="latest"
+                  role="tabpanel"
+                  aria-labelledby="latest-tab"
+                >
+                  <div class="latest-videos-slide owl-carousel" id="top"></div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <!-- ##### Tabs Area End ##### -->
+      </div>
+      <!-- ##### Tabs Area End ##### -->
 
-    <!-- ##### Catagory Area Start ##### 
-    <section class="catagory-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row" id="msg">
+      <!--
+        ##### Catagory Area Start #####
+          <section class="catagory-area">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="row" id="msg">
 
 
 
 
-                    </div>
-                </div>
-    </section>
-  ##### Catagory Area End ##### -->
-</main>
+                          </div>
+                      </div>
+          </section>
+        ##### Catagory Area End #####
+      -->
+    </main>
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area section-padding-15">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
-                <!-- Footer Content -->
-                <div class="col-12 col-lg-6 col-xl-6">
-                    <div class="footer-content">
-                        <!-- Logo -->
-                        <a href="index.html" class="foo-logo"><h6><img src="img/core-img/robodeals-logo.png" alt="" width="50px">Robo.Deals</h6></a>
-                        <p>Aggregatore automatico di offerte e codici coupon</p>
-                      
-                    </div>
-                </div>
-                <!-- Footer Content -->
-               
+      <div class="container-fluid">
+        <div class="row justify-content-between">
+          <!-- Footer Content -->
+          <div class="col-12 col-lg-6 col-xl-6 text-center mb-15">
+              <a
+              class="tile socialmedia btn btn-social btn-telegram"
+              href="https://t.me/robodeals"
+              target="_blank"
+              style="height: 36px;"
+            >
+              <span class="fa fa-telegram"></span>
+              Seguici su Telegram
+            </a>
+              <a
+              class="tile socialmedia btn btn-social-icon btn-facebook "
+              href="https://www.facebook.com/robo.deals"
+              target="_blank"
+            >
+              <span class="fa fa-facebook"></span>
+            </a>
+            <a
+              class="tile socialmedia btn btn-social-icon btn-instagram "
+              href="https://www.instagram.com/robo.deals/"
+              target="_blank"
+            >
+              <span class="fa fa-instagram"></span>
+            </a>
+    
+          </div>
+          <div class="col-12 col-lg-6 col-xl-6">
+            <div class="footer-content">
+              <!-- Logo -->
+              <a href="index.html" class="foo-logo"
+                ><h4>
+                  <img
+                    src="img/core-img/robodeals-logo.png"
+                    alt=""
+                    width="50px"
+                  />Robo.Deals
+                </h6></a
+              >
+              <p>Aggregatore automatico di offerte e codici coupon</p>
             </div>
-         
+          </div>
+      
+          <!-- Footer Content -->
         </div>
+      </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
 
@@ -137,82 +178,64 @@
     <!-- Bootstrap js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
 
-
     <script type="text/javascript">
-        lastid = 1789;
+      function addPost(id) {
+        var div = document.createElement("div");
+        div.className = "col-md-4 col-sm-12";
 
-        function addPost(id) {
+        var card = document.createElement("div");
+        card.className = "single-blog-post style2 mb-25";
 
+        //div.style = 'border: none; overflow: hidden; min-width: 320px; height: 677px;'
+        var s = document.createElement("script");
+        // debugger
+        s.setAttribute("src", "https://telegram.org/js/telegram-widget.js?5");
+        s.setAttribute("data-telegram-post", "robodeals/" + id);
+        s.setAttribute("data-width", "100%");
+        // s.setAttribute("data-height", "500");
+        s.setAttribute("data-userpic", "false");
 
+        card.appendChild(s);
+        div.appendChild(card);
+        document.getElementById("msg").appendChild(div);
+      }
 
-            var div = document.createElement("div");
-            div.className = "col-md-4 col-sm-12"
+      function addTop(id) {
+        var div = document.createElement("div");
+        div.className = "col-md-4 col-sm-12";
 
-            var card = document.createElement("div");
-            card.className = 'single-blog-post style2 mb-50'
+        var card = document.createElement("div");
+        card.className = "single-blog-post style2 mb-25";
 
-            //div.style = 'border: none; overflow: hidden; min-width: 320px; height: 677px;'
-            var s = document.createElement("script");
-            // debugger
-            s.setAttribute("src", "https://telegram.org/js/telegram-widget.js?5");
-            s.setAttribute("data-telegram-post", "robodeals/" + id);
-            s.setAttribute("data-width", "100%");
-            // s.setAttribute("data-height", "500");
-            s.setAttribute("data-userpic", "false");
-
-            card.appendChild(s)
-            div.appendChild(card)
-            document.getElementById("msg").appendChild(div)
-
-
-        }
-
-        function addTop(id) {
-
-
-            var div = document.createElement("div");
-            div.className = "col-md-4 col-sm-12"
-
-            var card = document.createElement("div");
-            card.className = 'single-blog-post style2 mb-50'
-
-            //div.style = 'border: none; overflow: hidden; min-width: 320px; height: 677px;'
-            var s = document.createElement("script");
-            // debugger
-            s.setAttribute("src", "https://telegram.org/js/telegram-widget.js?5");
-            s.setAttribute("data-telegram-post", "robodeals/" + id);
-            s.setAttribute("data-width", "100%");
-            // s.setAttribute("data-height", "500");
-            s.setAttribute("data-userpic", "false");
-            // s.setAttribute("id", id);
-            card.appendChild(s)
-            div.appendChild(card)
-            document.getElementById("top").appendChild(div)
-
-        }
- $.ajaxSetup({
+        //div.style = 'border: none; overflow: hidden; min-width: 320px; height: 677px;'
+        var s = document.createElement("script");
+        // debugger
+        s.setAttribute("src", "https://telegram.org/js/telegram-widget.js?5");
+        s.setAttribute("data-telegram-post", "robodeals/" + id);
+        s.setAttribute("data-width", "100%");
+        // s.setAttribute("data-height", "500");
+        s.setAttribute("data-userpic", "false");
+        // s.setAttribute("id", id);
+        card.appendChild(s);
+        div.appendChild(card);
+        document.getElementById("top").appendChild(div);
+      }
+      $.ajaxSetup({
         async: false
-    });
+      });
 
-data = $.getJSON('https://api.myjson.com/bins/95neg')
+      data = $.getJSON("https://api.myjson.com/bins/95neg");
 
-
-
-    lastid =data.responseJSON.lastMessage
-    for (var index = 0; index < 10; index++) {
-            addTop(lastid - index);
-            console.log(index);
-        }
-
-
-
-
+      lastid = data.responseJSON.lastMessage;
+      for (var index = 0; index < 1; index++) {
+        addTop(lastid - index);
+        console.log(index);
+      }
     </script>
 
     <!-- All Plugins js -->
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-</body>
-
+  </body>
 </html>
