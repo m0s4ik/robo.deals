@@ -92,6 +92,7 @@
                   aria-labelledby="latest-tab"
                 >
                   <div class="latest-videos-slide owl-carousel" id="top"></div>
+                    <div class="latest-videos-slide owl-carousel" id="topGearB"></div>
                 </div>
               </div>
             </div>
@@ -200,7 +201,7 @@
         document.getElementById("msg").appendChild(div);
       }
 
-      function addTop(id) {
+      function addTop(id,divID) {
         var div = document.createElement("div");
         div.className = "col-md-4 col-sm-12";
 
@@ -218,7 +219,7 @@
         // s.setAttribute("id", id);
         card.appendChild(s);
         div.appendChild(card);
-        document.getElementById("top").appendChild(div);
+        document.getElementById(divID).appendChild(div);
       }
       $.ajaxSetup({
         async: false
@@ -228,9 +229,17 @@
 
       lastid = data.responseJSON.lastMessage;
       for (var index = 0; index < 10; index++) {
-        addTop(lastid - index);
+        addTop(lastid - index, 'top');
         console.log(index);
       }
+      
+      lastid = 50;
+      for (var index = 0; index < 10; index++) {
+        addTop(lastid - index, 'topGearB');
+        console.log(index);
+      }
+      
+      
     </script>
 
     <!-- All Plugins js -->
