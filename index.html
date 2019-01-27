@@ -201,7 +201,7 @@
         document.getElementById("msg").appendChild(div);
       }
 
-      function addTop(id,divID) {
+      function addTop(id,divID,channel) {
         var div = document.createElement("div");
         div.className = "col-md-4 col-sm-12";
 
@@ -212,7 +212,7 @@
         var s = document.createElement("script");
         // debugger
         s.setAttribute("src", "https://telegram.org/js/telegram-widget.js?5");
-        s.setAttribute("data-telegram-post", "robodeals/" + id);
+        s.setAttribute("data-telegram-post", channel +"/" + id);
         s.setAttribute("data-width", "100%");
         // s.setAttribute("data-height", "500");
         s.setAttribute("data-userpic", "false");
@@ -229,13 +229,13 @@
 
       lastid = data.responseJSON.lastMessage;
       for (var index = 0; index < 10; index++) {
-        addTop(lastid - index, 'top');
+        addTop(lastid - index, 'top','robodeals');
         console.log(index);
       }
       
       lastid = 50;
       for (var index = 0; index < 10; index++) {
-        addTop(lastid - index, 'topGearB');
+        addTop(lastid - index, 'topGearB','robodeals_GB');
         console.log(index);
       }
       
