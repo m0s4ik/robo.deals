@@ -61,6 +61,13 @@
           >
             <span class="fa fa-instagram"></span>
           </a>
+		   <a
+            class="tile socialmedia btn btn-social-icon btn-twitter hiddensocial"
+            href="https://www.twitter.com/robo_deals/"
+            target="_blank"
+          >
+            <span class="fa fa-twitter"></span>
+          </a>
         </div>
       </header>
       <!-- ##### Header Area End ##### -->
@@ -80,7 +87,7 @@
                     role="tab"
                     aria-controls="latest"
                     aria-selected="true"
-                    >Ultime 10 Offerte</a
+                    >Ultime 10 Offerte Amazon</a
                   >
                 </li>
               </ul>
@@ -91,11 +98,71 @@
                   role="tabpanel"
                   aria-labelledby="latest-tab"
                 >
-                  <div class="latest-videos-slide owl-carousel" id="top"></div>
-                    <div class="latest-videos-slide owl-carousel" id="topGearB"></div>
+
+					  <div class="latest-videos-slide owl-carousel" id="top"></div>
                 </div>
               </div>
             </div>
+			
+			<div class="col-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="latest-tab"
+                    data-toggle="tab"
+                    href="#latest"
+                    role="tab"
+                    aria-controls="latest"
+                    aria-selected="true"
+                    >Ultime 10 Offerte GearBest</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="latest"
+                  role="tabpanel"
+                  aria-labelledby="latest-tab"
+                >
+
+					  <div class="latest-videos-slide owl-carousel" id="topGearB"></div>
+                </div>
+              </div>
+            </div>
+			
+			 
+			 
+			 <div class="col-12">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="latest-tab"
+                    data-toggle="tab"
+                    href="#latest"
+                    role="tab"
+                    aria-controls="latest"
+                    aria-selected="true"
+                    >Ultime 10 Offerte Ebay</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="latest"
+                  role="tabpanel"
+                  aria-labelledby="latest-tab"
+                >
+
+					  <div class="latest-videos-slide owl-carousel" id="topEbay"></div>
+                </div>
+              </div>
+            </div>
+			
+			
           </div>
         </div>
       </div>
@@ -147,7 +214,13 @@
             >
               <span class="fa fa-instagram"></span>
             </a>
-    
+     <a
+            class="tile socialmedia btn btn-social-icon btn-twitter hiddensocial"
+            href="https://www.twitter.com/robo_deals/"
+            target="_blank"
+          >
+            <span class="fa fa-twitter"></span>
+          </a>
           </div>
           <div class="col-12 col-lg-6 col-xl-6">
             <div class="footer-content">
@@ -228,14 +301,21 @@
       data = $.getJSON("https://api.myjson.com/bins/95neg");
 
       lastid = data.responseJSON.lastMessage;
+	  lastid = 5914
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'top','robodeals');
         console.log(index);
       }
-      
-      lastid = 375;
+
+      lastid = 939;
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'topGearB','robodeals_GB');
+        console.log(index);
+      }
+
+	  lastid = 193;
+      for (var index = 0; index < 10; index++) {
+        addTop(lastid - index, 'topEbay','robodeals_Ebay');
         console.log(index);
       }
       
