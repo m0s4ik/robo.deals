@@ -301,19 +301,19 @@
       data = $.getJSON("https://api.myjson.com/bins/95neg");
 
       lastid = data.responseJSON.lastMessage;
-	  lastid = 5914
+	
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'top','robodeals');
         console.log(index);
       }
 
-      lastid = 939;
+       lastid = data.responseJSON.lastMessageGB;
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'topGearB','robodeals_GB');
         console.log(index);
       }
 
-	  lastid = 193;
+lastid = data.responseJSON.lastMessageEBAY;
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'topEbay','robodeals_Ebay');
         console.log(index);
