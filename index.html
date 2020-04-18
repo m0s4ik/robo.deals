@@ -335,14 +335,13 @@
 
       data = $.getJSON("https://jsonbox.io/box_97a0c81c1ba9de59b91c");
 
-      lastid = data.responseJSON.lastMessage;
+      lastid = data.responseJSON[0].lastMessage
 	
       for (var index = 0; index < 10; index++) {
         addTop(lastid - index, 'top','robodeals_web');
         console.log(index);
       }
-
-	  
+  
       // lastid = data.responseJSON.lastMessageGB;
       for (var index = 0; index < 0; index++) {
         addTop(lastid - index, 'topGearB','robodeals_GB');
