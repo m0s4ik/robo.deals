@@ -121,6 +121,9 @@
               <div class="input-group-append">
                 <button class="btn btn-outline-primary" type="button" onclick="caricaVideo()">Vai!</button>
               </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" id="btnPaste">incolla</button>
+              </div>
 
             </div>
 
@@ -240,6 +243,12 @@ alert('formato non riconosciuto')
       }
     }
 
+      $("#btnPaste").click(function(){
+        //paste copyed text to manipulate field
+        txtArea1 = document.getElementById("videolink");
+        $(txtArea1).val($(txtArea1).val()+copy);
+    });
+    
     function getParameterByName(name, url) {
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, '\\$&');
