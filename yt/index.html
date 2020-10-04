@@ -244,9 +244,13 @@ alert('formato non riconosciuto')
     }
 
       $("#btnPaste").click(function(){
-        //paste copyed text to manipulate field
-        txtArea1 = document.getElementById("videolink");
-        $(txtArea1).val($(txtArea1).val()+copy);
+        
+          var editor = document.getElementById("videolink");
+    editor.focus();
+  //  editor.select();
+    document.execCommand('Paste');
+        
+        
     });
     
     function getParameterByName(name, url) {
