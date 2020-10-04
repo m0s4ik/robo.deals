@@ -110,26 +110,28 @@
         <div class="row">
           <div class="col-12">
 
-            bla bla bla blagb<br>
-
+            <small id="linHelp" class="form-text text-muted">Inserire il link di YouTube da visualizzare</small>
 
             <div class="input-group mb-3">
               <input type="text" id="videolink" class="form-control" placeholder="Recipient's username"
                 aria-label="Recipient's username" aria-describedby="basic-addon2"
                 value="https://www.youtube.com/watch?v=dMH0bHeiRNg">
+
               <div class="input-group-append">
                 <button class="btn btn-outline-primary" type="button" onclick="caricaVideo()">Vai!</button>
               </div>
+
             </div>
 
           </div>
           <div class="col-12 text-center">
+            <div class="embed-responsive embed-responsive-16by9">
 
-            <iframe class="restrain" title="YouTube video player" width="640" height="390" id="iframeyt"
+            <iframe class="restrain" title="YouTube video player" id="iframeyt"
               src="//www.youtube.com/embed/LkBv_gxIWzc?wmode=opaque" allowfullscreen="true" frameborder="0"
-              id="yui-gen1" style="width: 580px; height: 353px;"></iframe>
+             ></iframe>
 
-
+            </div>
           </div>
  
         </div>
