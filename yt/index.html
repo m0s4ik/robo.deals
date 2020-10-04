@@ -127,13 +127,12 @@
           <div class="col-12 text-center">
             <div class="embed-responsive embed-responsive-16by9">
 
-            <iframe class="restrain" title="YouTube video player" id="iframeyt"
-              src="//www.youtube.com/embed/LkBv_gxIWzc?wmode=opaque" allowfullscreen="true" frameborder="0"
-             ></iframe>
+              <iframe class="restrain" title="YouTube video player" id="iframeyt"
+                src="//www.youtube.com/embed/LkBv_gxIWzc?wmode=opaque" allowfullscreen="true" frameborder="0"></iframe>
 
             </div>
           </div>
- 
+
         </div>
       </div>
     </div>
@@ -200,39 +199,55 @@
 
   <!-- ##### All Javascript Script ##### -->
   <!-- jQuery-2.2.4 js -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <!-- Popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
 
   <!-- Bootstrap js -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
 
 
   <script type="text/javascript">
     function caricaVideo() {
-      
+
       let videolink = $('#videolink').val()
       const urlParams = new URLSearchParams(videolink);
-      const paramV = getParameterByName('v',videolink)
+
+      let urlParsed = new URL(videolink)
+
+
+
+      let paramV = getParameterByName('v', videolink)
 
       if (paramV)
-        url = '//www.youtube.com/embed/'+paramV+'?wmode=opaque'
+        url = '//www.youtube.com/embed/' + paramV + '?wmode=opaque'
+      else {
+        if (urlParsed.host == "youtu.be")
+          paramV = urlParsed.pathname.split('/')[urlParsed.pathname.split('/').length - 1]
+        url = '//www.youtube.com/embed/' + paramV + '?wmode=opaque'
 
-
-      $('#iframeyt').attr('src', url);
-
+      }
+      if (url)
+        $('#iframeyt').attr('src', url);
+      else {
+alert('formato non riconosciuto')
+      }
     }
 
     function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
   </script>
 
   <!-- All Plugins js -->
