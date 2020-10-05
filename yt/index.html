@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Title -->
+  <title>PiP YouTube by Robo.Deals</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/core-img/favicon.ico" />
+  
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/bootstrap-social.css" />
+
+  <!-- Global site tag (gtag.js) - Google Ads: 656225900 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-656225900"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-656225900');
+  </script>
+  <!-- Event snippet for Visualizzazione di pagina conversion page -->
+  <script>
+    gtag('event', 'conversion', {
+      'send_to': 'AW-656225900/gfZFCL2ql8sBEOzs9LgC',
+      'value': 1.0,
+      'currency': 'EUR'
+    });
+  </script>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '692137797958405');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=692137797958405&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body class="d-flex flex-column" style="min-height: 100vh">
+  <!-- Preloader  style="display:none!important" -->
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="spinner">
+      <div class="double-bounce1">
+        <img src="../img/core-img/robodeals-logo.png" alt="" width="85" />
+      </div>
+      <div class="double-bounce2">
+        <img src="../img/core-img/robodeals-logo.png" alt="" width="85" />
+      </div>
+    </div>
+  </div>
+  <main class="flex-fill">
+    <!-- ##### Header Area Start ##### -->
+
+    <header>
+
+      <img class="robologo" src="../img/core-img/robodeals-logo.png" />
+      <span class="robotext">Robo.Deals</span>
+
+      <div class="head">
+
+        <a class="btn btn-social btn-telegram" href="https://robo.deals/telegram/" target="_blank">
+          <span class="fa fa-telegram"></span>
+          Seguici su Telegram
+        </a>
+        <a class="tile socialmedia btn btn-social-icon btn-facebook hiddensocial"
+          href="https://www.facebook.com/robo.deals" target="_blank">
+          <span class="fa fa-facebook"></span>
+        </a>
+        <a class="tile socialmedia btn btn-social-icon btn-instagram hiddensocial"
+          href="https://www.instagram.com/robo.deals/" target="_blank">
+          <span class="fa fa-instagram"></span>
+        </a>
+        <a class="tile socialmedia btn btn-social-icon btn-twitter hiddensocial"
+          href="https://www.twitter.com/robo_deals/" target="_blank">
+          <span class="fa fa-twitter"></span>
+        </a>
+      </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Tabs Area Start ##### -->
+    <div class="video-mag-tabs-area mt-5">
+      <div class="container">
+        <div class="row">
+
+
+
+      
+          <div class="col-12">
+
+            
+                <small id="linHelp" class="form-text text-muted">Inserire il link di YouTube da visualizzare</small>
+             
+                  
+        
+
+         
+            <!-- Button trigger modal -->
+
+
+
+
+            <div class="input-group mb-3">
+              <input type="text" id="videolink" class="form-control" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" placeholder="https://youtu.be/LkBv_gxIWzc">
+
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalLong">
+                       <i class="fa fa-question-circle" aria-hidden="true"></i>
+           
+                     </button>
+                   </div>
+
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" id="btnPaste"><i class="fa fa-clipboard"></i>
+
+                </button>
+              </div>
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" onclick="caricaVideo()"><i
+                    class="fa fa-youtube-play"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+               <div class="col-12 text-center p-1">
+
+           
+              <iframe
+                src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=13&l=ez&f=ifr&linkID=bdaf551ca887631cd01fdb11d5f93f05&t=robodeals-21&tracking_id=robodeals-21"
+                width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;"
+                frameborder="0"></iframe>
+     
+          </div>
+          <div class="col-12 text-center">
+            <div class="embed-responsive embed-responsive-16by9">
+
+              <iframe class="restrain" title="YouTube video player" id="iframeyt"
+                src="//www.youtube.com/embed/LkBv_gxIWzc?wmode=opaque" allowfullscreen="true" frameborder="0"></iframe>
+
+            </div>
+          </div>
+          <div class="col-12 text-center p-1">
+
+           
+            <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=12&l=ez&f=ifr&linkID=48c9759137ebacec9f7626a96e644c78&t=robodeals-21&tracking_id=robodeals-21" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##### Tabs Area End ##### -->
+
+    <!--
+        ##### Catagory Area Start #####
+          <section class="catagory-area">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="row" id="msg">
+
+
+
+
+                          </div>
+                      </div>
+          </section>
+        ##### Catagory Area End #####
+      -->
+  </main>
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area section-padding-15">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <!-- Footer Content -->
+        <div class="col-12 col-lg-6 col-xl-6 text-center mb-15">
+          <a class="btn btn-social btn-telegram" href="https://robo.deals/telegram/" target="_blank"
+            style="height: 36px;">
+            <span class="fa fa-telegram"></span>
+            Seguici su Telegram
+          </a>
+          <a class="btn btn-social-icon btn-facebook " href="https://www.facebook.com/robo.deals" target="_blank">
+            <span class="fa fa-facebook"></span>
+          </a>
+          <a class="btn btn-social-icon btn-instagram " href="https://www.instagram.com/robo.deals/" target="_blank">
+            <span class="fa fa-instagram"></span>
+          </a>
+          <a class="tile socialmedia btn btn-social-icon btn-twitter hiddensocial"
+            href="https://www.twitter.com/robo_deals/" target="_blank">
+            <span class="fa fa-twitter"></span>
+          </a>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6">
+          <div class="footer-content">
+            <!-- Logo -->
+            <a href="index.html" class="foo-logo">
+              <h4>
+                <img src="../img/core-img/robodeals-logo.png" alt="" width="50px" />Robo.Deals
+                </h6>
+            </a>
+            <p>Aggregatore automatico di offerte e codici coupon</p>
+          </div>
+        </div>
+
+        <!-- Footer Content -->
+      </div>
+    </div>
+  </footer>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Guida</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">Guida</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="text-center">
+        1. Tap su condividi
+        <img src="1.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+        2. Copia il link
+        <img src="2.jpg" class="img-fluid" alt="Responsive image">
+        3. Incolla il link
+        <img src="3.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ##### Footer Area End ##### -->
+
+  <!-- ##### All Javascript Script ##### -->
+  <!-- jQuery-2.2.4 js -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- Popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+
+  <!-- Bootstrap js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+
+  <script type="text/javascript">
+    function caricaVideo() {
+
+      let videolink = $('#videolink').val()
+      const urlParams = new URLSearchParams(videolink);
+
+      let urlParsed = new URL(videolink)
+
+
+
+      let paramV = getParameterByName('v', videolink)
+
+      if (paramV)
+        url = '//www.youtube.com/embed/' + paramV + '?wmode=opaque'
+      else {
+        if (urlParsed.host == "youtu.be")
+          paramV = urlParsed.pathname.split('/')[urlParsed.pathname.split('/').length - 1]
+        url = '//www.youtube.com/embed/' + paramV + '?wmode=opaque'
+
+      }
+      if (url)
+        $('#iframeyt').attr('src', url);
+      else {
+        alert('formato non riconosciuto')
+      }
+    }
+
+    $("#btnPaste").click(function () {
+
+
+      var pasteTextarea = document.querySelector('#videolink');
+
+      if (true) {
+        navigator.clipboard.readText()
+          .then((text) => {
+            pasteTextarea.textContent = text;
+            //console.log('Async readText successful, "' + text + '" written');
+            $('#videolink').val(text)
+            caricaVideo()
+          })
+          .catch((err) => console.log('Async readText failed with error: "' + err + '"'));
+      } else {
+        pasteTextarea.focus();
+        try {
+          var successful = document.execCommand('paste');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Pasting text command was ' + msg);
+        } catch (err) {
+          console.log('execCommand Error', err);
+        }
+      }
+
+
+
+
+    });
+
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+  </script>
+
+  <!-- All Plugins js -->
+  <script src="../js/plugins/plugins.js"></script>
+  <!-- Active js -->
+  <script src="../js/active.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131130642-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131130642-1');
+  </script>
+</body>
+
+</html>
