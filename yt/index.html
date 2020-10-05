@@ -270,9 +270,9 @@
         navigator.clipboard.readText()
           .then((text) => {
             pasteTextarea.textContent = text;
-            console.log('Async readText successful, "' + text + '" written');
+            //console.log('Async readText successful, "' + text + '" written');
             $('#videolink').val(text)
-
+            caricaVideo()
           })
           .catch((err) => console.log('Async readText failed with error: "' + err + '"'));
       } else {
