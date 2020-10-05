@@ -14,6 +14,9 @@
 
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/bootstrap-social.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <!-- Global site tag (gtag.js) - Google Ads: 656225900 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-656225900"></script>
   <script>
@@ -84,7 +87,7 @@
       <span class="robotext">Robo.Deals</span>
 
       <div class="head">
-        
+
         <a class="btn btn-social btn-telegram" href="https://robo.deals/telegram/" target="_blank">
           <span class="fa fa-telegram"></span>
           Seguici su Telegram
@@ -114,19 +117,32 @@
             <small id="linHelp" class="form-text text-muted">Inserire il link di YouTube da visualizzare</small>
 
             <div class="input-group mb-3">
-              <input type="text" id="videolink" class="form-control" 
-                aria-label="Recipient's username" aria-describedby="basic-addon2"
-                placeholder="https://youtu.be/LkBv_gxIWzc">
+              <input type="text" id="videolink" class="form-control" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" placeholder="https://youtu.be/LkBv_gxIWzc">
+
 
               <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" onclick="caricaVideo()">Vai!</button>
+                <button class="btn btn-outline-primary" type="button" id="btnPaste"><i class="far fa-clone"></i>
+
+                </button>
               </div>
               <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="btnPaste">incolla</button>
+                <button class="btn btn-outline-primary" type="button" onclick="caricaVideo()"><i
+                    class="fas fa-video"></i>
+                </button>
               </div>
 
             </div>
 
+          </div>
+               <div class="col-12 text-center p-1">
+
+           
+              <iframe
+                src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=13&l=ez&f=ifr&linkID=bdaf551ca887631cd01fdb11d5f93f05&t=robodeals-21&tracking_id=robodeals-21"
+                width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;"
+                frameborder="0"></iframe>
+     
           </div>
           <div class="col-12 text-center">
             <div class="embed-responsive embed-responsive-16by9">
@@ -136,7 +152,12 @@
 
             </div>
           </div>
+          <div class="col-12 text-center p-1">
 
+           
+            <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=29&p=12&l=ez&f=ifr&linkID=48c9759137ebacec9f7626a96e644c78&t=robodeals-21&tracking_id=robodeals-21" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+          
+          </div>
         </div>
       </div>
     </div>
@@ -170,12 +191,10 @@
             <span class="fa fa-telegram"></span>
             Seguici su Telegram
           </a>
-          <a class="btn btn-social-icon btn-facebook " href="https://www.facebook.com/robo.deals"
-            target="_blank">
+          <a class="btn btn-social-icon btn-facebook " href="https://www.facebook.com/robo.deals" target="_blank">
             <span class="fa fa-facebook"></span>
           </a>
-          <a class="btn btn-social-icon btn-instagram " href="https://www.instagram.com/robo.deals/"
-            target="_blank">
+          <a class="btn btn-social-icon btn-instagram " href="https://www.instagram.com/robo.deals/" target="_blank">
             <span class="fa fa-instagram"></span>
           </a>
           <a class="tile socialmedia btn btn-social-icon btn-twitter hiddensocial"
@@ -239,20 +258,40 @@
       if (url)
         $('#iframeyt').attr('src', url);
       else {
-alert('formato non riconosciuto')
+        alert('formato non riconosciuto')
       }
     }
 
-      $("#btnPaste").click(function(){
-        
-          var editor = document.getElementById("videolink");
-    editor.focus();
-  //  editor.select();
-    document.execCommand('Paste');
-        
-        
+    $("#btnPaste").click(function () {
+
+
+      var pasteTextarea = document.querySelector('#videolink');
+
+      if (true) {
+        navigator.clipboard.readText()
+          .then((text) => {
+            pasteTextarea.textContent = text;
+            console.log('Async readText successful, "' + text + '" written');
+            $('#videolink').val(text)
+
+          })
+          .catch((err) => console.log('Async readText failed with error: "' + err + '"'));
+      } else {
+        pasteTextarea.focus();
+        try {
+          var successful = document.execCommand('paste');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Pasting text command was ' + msg);
+        } catch (err) {
+          console.log('execCommand Error', err);
+        }
+      }
+
+
+
+
     });
-    
+
     function getParameterByName(name, url) {
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, '\\$&');
